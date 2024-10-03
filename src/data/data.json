@@ -5,6 +5,10 @@
 	},
 	"menuItems": [
 		{
+			"label": "Home",
+			"page": "/"
+		},
+		{
 			"label": "About",
 			"page": "/about"
 		},

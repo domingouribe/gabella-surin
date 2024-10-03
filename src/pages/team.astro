@@ -1,11 +1,15 @@
 ---
 //team.astro
-import { getCollection } from "astro:content";
-const team = await getCollection("team");
 import Card from "@/components/Card.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Accordion from "@/components/Accordion.astro";
 import AccordionItem from "@/components/AccordionItem.astro";
+
+//Import images team members
+import Miguel from "@/assets/team/MSchloss_with_JStiglitz.png";
+import Silvia from "@/assets/team/Silvia_Schloss.png";
+import Jessie from "@/assets/team/Jessie_Schloss.png";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Team" description="Our team">
@@ -17,8 +21,8 @@ import AccordionItem from "@/components/AccordionItem.astro";
 			<AccordionItem title="Miguel Schloss, President & CEO">
 				<article>
 					<header>
-						<img
-							src="src/assets/team/MSchloss_with_JStiglitz.png"
+						<Image
+							src={Miguel}
 							alt="Miguel Schloos"
 							class="left-img"
 							width="270"
@@ -79,8 +83,8 @@ import AccordionItem from "@/components/AccordionItem.astro";
 			<AccordionItem title="Silvia Lay, Vice-President">
 				<article>
 					<header>
-						<img
-							src="src/assets/team/Silvia_Schloss.png"
+						<Image
+							src={Silvia}
 							alt="Silvia Schloss"
 							class="left-img"
 							width="270"
@@ -114,8 +118,8 @@ import AccordionItem from "@/components/AccordionItem.astro";
 			<AccordionItem title="Jessie Schloss, Marketing/Art Director">
 				<article>
 					<header>
-						<img
-							src="src/assets/team/Jessie_Schloss.png"
+						<Image
+							src={Jessie}
 							alt="Jessie Schloss"
 							class="left-img"
 							width="270"
