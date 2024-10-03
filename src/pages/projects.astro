@@ -1,8 +1,15 @@
 ---
-import DocumentsCard from "@/components/DocumentsCard.astro";
 import DocumentsCardsContainer from "@/components/DocumentsCardsContainer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/Card.astro";
+
+//Import Images
+import Showrom from "@/assets/projects/Showroom.png";
+import Home from "@/assets/projects/Home1.png";
+import Office1 from "@/assets/projects/Office1.png";
+import Office2 from "@/assets/projects/Office2.png";
+import Apartament from "@/assets/projects/Apartment1.png";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="Projects" description="Projects">
@@ -148,11 +155,43 @@ import Card from "@/components/Card.astro";
 			</div>
 		</Card>
 		<Card title="Leased Apts, Offices & Showrooms">
-			<img src="src/assets/projects/Showroom.png" alt="Showroom" />
-			<img src="src/assets/projects/Home1.png" alt="Showroom" />
-			<img src="src/assets/projects/Office1.png" alt="Showroom" />
-			<img src="src/assets/projects/Office2.png" alt="Showroom" />
-			<img src="src/assets/projects/Apartment1.png" alt="Showroom" />
+			<div class="LeasedGrid">
+				<Image
+					class="image-1"
+					src={Showrom}
+					alt="Showroom"
+					width={600}
+					height={600}
+				/>
+				<Image
+					class="image-2"
+					src={Home}
+					alt="Showroom"
+					width={390}
+					height={390}
+				/>
+				<Image
+					class="image-4"
+					src={Office1}
+					alt="Showroom"
+					width={227}
+					height={300}
+				/>
+				<Image
+					class="image-3"
+					src={Office2}
+					alt="Showroom"
+					width={390}
+					height={390}
+				/>
+				<Image
+					class="image-5"
+					src={Apartament}
+					alt="Showroom"
+					width={227}
+					height={300}
+				/>
+			</div>
 		</Card>
 	</DocumentsCardsContainer>
 
@@ -195,6 +234,45 @@ import Card from "@/components/Card.astro";
 			flex-flow: column nowrap;
 			gap: var(--size-4);
 			padding-right: var(--size-16);
+		}
+
+		.LeasedGrid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				"image-1 image-1"
+				"image-2 image-3"
+				"image-4 image-5";
+			gap: 3rem;
+			justify-items: center;
+			justify-content: center;
+
+			.image-1 {
+				grid-area: image-1;
+			}
+			.image-2 {
+				grid-area: image-2;
+			}
+			.image-3 {
+				grid-area: image-3;
+			}
+			.image-4 {
+				grid-area: image-4;
+			}
+			.image-5 {
+				grid-area: image-5;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.LeasedGrid {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"picture"
+					"wedo"
+					"weare";
+			}
 		}
 	</style>
 </BaseLayout>

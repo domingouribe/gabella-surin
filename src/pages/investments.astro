@@ -16,18 +16,19 @@ import SQM from "@/assets/investments/SQM.jpg";
 ---
 
 <BaseLayout title="SurInvest - Investments" description="">
-	<Card
-		title="Investments"
-		subtitle={"Breeding Ground for Innovation & Leap-Frogging Development"}
-		showSubtitle={true}>
-		<p>
-			Surinvest allocates equity and debt resources to first tier companies in
-			Chile, which are at the forefront of economic integration with emerging
-			and developed economies around the world, particularly financial
-			intermediaries, extractive industries, utilities, transportation and
-			retailing chains.
-		</p>
-
+	<div class="InvestmentsContent">
+		<Card
+			title="Investments"
+			subtitle={"Breeding Ground for Innovation & Leap-Frogging Development"}
+			showSubtitle={true}>
+			<p>
+				Surinvest allocates equity and debt resources to first tier companies in
+				Chile, which are at the forefront of economic integration with emerging
+				and developed economies around the world, particularly financial
+				intermediaries, extractive industries, utilities, transportation and
+				retailing chains.
+			</p>
+		</Card>
 		<div class="InversoresContainer">
 			<a href="https://portales.bancochile.cl/" class="AssociateLink">
 				<Image
@@ -97,10 +98,16 @@ import SQM from "@/assets/investments/SQM.jpg";
 				<Image src={SQM} alt={"Logo Banco de Chile"} width={190} height={100} />
 			</a>
 		</div>
-	</Card>
+	</div>
 </BaseLayout>
 
 <style lang="scss">
+	.InvestmentsContent {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 2rem;
+	}
+
 	.InversoresContainer {
 		display: grid;
 		column-gap: 2em;
