@@ -1,0 +1,91 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="Accordion-item">
+	<button class="Accordion-trigger" aria-expanded="false">
+		<span class="Accordion-icon" aria-hidden="true"></span>
+		<span class="Accordion-title">{title}</span>
+	</button>
+	<div class="Accordion-content">
+		<div class="Accordion-contentInner">
+			<slot />
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	.Accordion {
+		&-item {
+			border-bottom: 1px solid var(--color-border, #ddd);
+		}
+
+		&-trigger {
+			width: 100%;
+			padding: 1rem;
+			border: none;
+			background: none;
+			text-align: left;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		&-icon {
+			min-width: 10px;
+			width: 10px;
+			height: 10px;
+			border: solid var(--color-text, #333);
+			border-width: 0 2px 2px 0;
+			transform: rotate(-45deg);
+			transition: transform 0.5s ease;
+		}
+
+		&-title {
+			flex: 1;
+		}
+
+		&-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.5s ease;
+
+			&Inner {
+				padding: 0 1rem 1rem 2.5rem;
+			}
+		}
+	}
+
+	// Estilos para el estado activo
+	.Accordion-trigger[aria-expanded="true"] {
+		.Accordion-icon {
+			transform: rotate(45deg);
+		}
+
+		+ .Accordion-content {
+			max-height: 1000px;
+		}
+	}
+</style>
+
+<script>
+	function setupAccordions() {
+		document.querySelectorAll(".Accordion-trigger").forEach((trigger) => {
+			trigger.addEventListener("click", () => {
+				const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+				trigger.setAttribute("aria-expanded", (!isExpanded).toString());
+			});
+		});
+	}
+
+	// Para la carga inicial
+	document.addEventListener("DOMContentLoaded", setupAccordions);
+
+	// Para la navegación de Astro
+	document.addEventListener("astro:page-load", setupAccordions);
+</script>

@@ -18,13 +18,14 @@
   --link-hover-color: var(--orange-color);
   --border-strokes-color: var(--grey-color-050);
   --item-doc-link: var(--grey-color-200);
+  --subtitle-background-color: hsl(0, 0%, 69%);
 
   //Tokens
   --primary-color: var(--orange-color);
   --secondary-color: var(--blue-color);
 
   // Base font size and scaling
-  --base-size: 16px;
+  --base-size: 14px;
 
   // Basic sizes in rem (1rem = 16px)
   --size-0: 0;
@@ -92,7 +93,7 @@
   width: 100%;
   margin-inline: auto;
   max-width: var(--max-width-size);
-  padding-inline: 1rem;
+  // padding-inline: 1rem;
 }
 
 html {
@@ -144,6 +145,7 @@ body {
   font-family: var(--typography);
   color: var(--text-color);
   background-color: white;
+  line-height: 1.1;
 
   @media (max-width: 440px) {
     font-size: var(--size-3);
