@@ -1,0 +1,67 @@
+---
+// Hero.astro
+import sliderData from "../data/slider.json";
+
+const { images } = sliderData;
+---
+
+<section class="Hero">
+	<div class="Container">
+		<div class="ImageContainer">
+			{
+				images.map((image, index) => (
+					<img
+						src={image.src}
+						alt={image.alt}
+						class={index === 0 ? "active" : ""}
+						data-index={index}
+					/>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.Hero {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.ImageContainer {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 3;
+		border-radius: var(--border-radius-sm);
+		overflow: hidden;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+		transition: opacity 1.5s ease-in-out;
+
+		&.active {
+			opacity: 1;
+		}
+	}
+</style>
+
+<script>
+	const images = document.querySelectorAll(".Hero img");
+	let currentIndex = 0;
+	const transitionTime = 7000; // 5 segundos entre cada imagen
+
+	function showNextImage() {
+		images[currentIndex].classList.remove("active");
+		currentIndex = (currentIndex + 1) % images.length;
+		images[currentIndex].classList.add("active");
+	}
+
+	setInterval(showNextImage, transitionTime);
+</script>

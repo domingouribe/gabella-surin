@@ -1,0 +1,155 @@
+@use "normalize.css";
+
+:root {
+  --typography: Helvetica, sans-serif;
+
+  //Colors
+  --orange-color: hsl(22, 90%, 54%);
+  --blue-color: hsl(235, 53%, 37%);
+  --grey-color-050: hsl(0, 0%, 90%);
+  --grey-color-100: hsl(0, 0%, 80%);
+  --grey-color-200: hsl(0, 0%, 70%);
+  --grey-color-400: hsl(0, 0%, 60%);
+  --grey-color-200: hsl(0, 0%, 40%);
+
+  //Alias
+  --text-color: var(--grey-color-400);
+  --link-default-color: var(--blue-color);
+  --link-hover-color: var(--orange-color);
+  --border-strokes-color: var(--grey-color-050);
+  --item-doc-link: var(--grey-color-200);
+
+  //Tokens
+  --primary-color: var(--orange-color);
+  --secondary-color: var(--blue-color);
+
+  // Base font size and scaling
+  --base-size: 16px;
+
+  // Basic sizes in rem (1rem = 16px)
+  --size-0: 0;
+  --size-1: 0.25rem;
+  /* 4px */
+  --size-2: 0.5rem;
+  /* 8px */
+  --size-3: 0.75rem;
+  /* 12px */
+  --size-4: 1rem;
+  /* 16px */
+  --size-5: 1.25rem;
+  /* 20px */
+  --size-6: 1.5rem;
+  /* 24px */
+  --size-7: 1.75rem;
+  /* 28px */
+  --size-8: 2rem;
+  /* 32px */
+  --size-9: 2.25rem;
+  /* 36px */
+  --size-10: 2.5rem;
+  /* 40px */
+  --size-11: 2.75rem;
+  /* 44px */
+  --size-12: 3rem;
+  /* 48px */
+  --size-14: 3.5rem;
+  /* 56px */
+  --size-16: 4rem;
+  /* 64px */
+  --size-20: 5rem;
+  /* 80px */
+  --size-24: 6rem;
+  /* 96px */
+  --size-32: 8rem;
+  /* 128px */
+  --size-40: 10rem;
+  /* 160px */
+
+  // Spacing (Paddings and Border Radius)
+  --padding-sm: var(--size-1);
+  /* 8px */
+  --padding-md: var(--size-3);
+  /* 16px */
+  --padding-lg: var(--size-8);
+  /* 32px */
+  --padding-xl: var(--size-16);
+  /* 64px */
+
+  --border-radius-sm: var(--size-2);
+  /* 8px */
+  --border-radius-md: var(--size-4);
+  /* 16px */
+  --border-radius-lg: var(--size-8);
+  /* 32px */
+  --border-radius-xl: var(--size-20);
+  /* 80px */
+
+  // Layout Utils
+  --max-width-size: 965px;
+}
+
+.Container {
+  width: 100%;
+  margin-inline: auto;
+  max-width: var(--max-width-size);
+  padding-inline: 1rem;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: var(--base-size);
+  /* 16px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  transition: all ease-in-out 0.2s;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: var(--size-3) 0 var(--size-2);
+  color: var(--primary-color);
+  /* 40px 0 8px */
+}
+
+a,
+:link {
+  color: var(--item-doc-link);
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+body {
+  font-family: var(--typography);
+  color: var(--text-color);
+  background-color: white;
+
+  @media (max-width: 440px) {
+    font-size: var(--size-3);
+  }
+}
+
+main {
+  padding-block: var(--size-10);
+}

@@ -1,0 +1,61 @@
+---
+import Card from "@/components/Card.astro";
+import CardsContainer from "@/components/CardsContainer.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import Banchile from "@/assets/Banchile.png";
+import BancoEdwards from "@/assets/BancoEdwards.png";
+import Safra from "@/assets/Safra.png";
+import Fuensalida from "@/assets/Fuensalida.png";
+---
+
+<BaseLayout title="Associates" description="Associates">
+  <CardsContainer>
+    <Card
+      title="Associates"
+      subtitle={"Seamless Integration of Expertise for Effective Assistance"}
+      showSubtitle={true}
+      description="Surinvest has formal agreements with specialized technical and financial advisory firms to provide specialized support for investment processes in niche markets, including their appraisals, acquisition, execution, purchase and sales,  under Surinvest’s oversight."
+    />
+  </CardsContainer>
+
+  <div class="InversoresContainer">
+    <a href="http://www.banchileinversiones.cl/" class="AssociateLink">
+      <Image src={Banchile} alt={"Banchile Inversiones Logo"} />
+    </a>
+    <a
+      href="https://portales.bancoedwards.cl/personas/inversiones"
+      class="AssociateLink"
+    >
+      <Image src={BancoEdwards} alt={"Banco Edwards Logo"} />
+    </a>
+    <a href="https://www.safra.com/" class="AssociateLink">
+      <Image src={Safra} alt={"Banchile Inversiones Logo"} />
+    </a>
+    <a href="https://www.fydv.cl/" class="AssociateLink">
+      <Image src={Fuensalida} alt={"Banchile Inversiones Logo"} />
+    </a>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  .InversoresContainer {
+    display: grid;
+    column-gap: 2em;
+    row-gap: 2em;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16em), 1fr));
+    grid-auto-flow: dense;
+    height: auto;
+
+    a {
+      border: solid 2px var(--border-strokes-color);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>

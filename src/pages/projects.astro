@@ -1,0 +1,197 @@
+---
+import DocumentsCard from "@/components/DocumentsCard.astro";
+import DocumentsCardsContainer from "@/components/DocumentsCardsContainer.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Card from "@/components/Card.astro";
+---
+
+<BaseLayout title="Projects" description="Projects">
+  <video controls="true">
+    <source src="https://surinvest.gabella.cl/virtus.mp4" type="video/mp4" />
+    Your browser does not support the Video. Please update now
+  </video>
+
+  <DocumentsCardsContainer>
+    <Card
+      title="Projects menú"
+      subtitle={"Top-of-the-Line Deisgn for Enhanced Quality & Value"}
+      showSubtitle={true}
+      description="Please select a link below to view the details of each project: "
+    >
+      <ul class="Projects-menu">
+        <li class="Projects-menu__item">
+          <a href="#new-projects">New Projects</a>
+        </li>
+        <li class="Projects-menu__item">
+          <a href="#completed-projects">Completed Projects</a>
+        </li>
+        <li class="Projects-menu__item">
+          <a href="#leased">Leased Apartments, Offices & Showrooms</a>
+        </li>
+      </ul>
+    </Card>
+    <Card title="New projects">
+      <div class="Columns">
+        <figure>
+          <img
+            src="/src/assets/projects/NSdR.jpg"
+            alt="Imagen fachada edificio Nuestra Señora Del Rosario"
+          />
+        </figure>
+        <div class="ProjectCardContent">
+          <div class="ProjectInner-title">
+            Edificio nuestra señora del rosario
+          </div>
+          <p>Vitacura District in Santiago.</p>
+          <p>
+            20 apartments of 106 to 375 square meters. For more information, <a
+              href="https://ibuenaventura.cl/proyectos-buenaventura/nuestra-sra-del-rosario-vitacura/"
+              >please see the website</a
+            > or <a href="https://ibuenaventura.cl/brochure-nuestra/"
+              >view the brochure</a
+            >
+          </p>
+        </div>
+      </div>
+    </Card>
+    <Card title="Completed projects">
+      <div class="Columns">
+        <figure>
+          <img
+            src="/src/assets/projects/NSdR.jpg"
+            alt="Imagen fachada edificio Nuestra Señora Del Rosario"
+          />
+        </figure>
+        <div class="ProjectCardContent">
+          <div class="ProjectInner-title">
+            Edificio nuestra señora del rosario
+          </div>
+          <p>Vitacura District in Santiago.</p>
+          <p>
+            20 apartments of 106 to 375 square meters. For more information, <a
+              href="https://ibuenaventura.cl/proyectos-buenaventura/nuestra-sra-del-rosario-vitacura/"
+              >please see the website</a
+            > or <a href="https://ibuenaventura.cl/brochure-nuestra/"
+              >view the brochure</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="Columns">
+        <figure>
+          <img
+            src="/src/assets/projects/NSdR.jpg"
+            alt="Imagen fachada edificio Nuestra Señora Del Rosario"
+          />
+        </figure>
+        <div class="ProjectCardContent">
+          <div class="ProjectInner-title">
+            Edificio nuestra señora del rosario
+          </div>
+          <p>Vitacura District in Santiago.</p>
+          <p>
+            20 apartments of 106 to 375 square meters. For more information, <a
+              href="https://ibuenaventura.cl/proyectos-buenaventura/nuestra-sra-del-rosario-vitacura/"
+              >please see the website</a
+            > or <a href="https://ibuenaventura.cl/brochure-nuestra/"
+              >view the brochure</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="Columns">
+        <figure>
+          <img
+            src="/src/assets/projects/NSdR.jpg"
+            alt="Imagen fachada edificio Nuestra Señora Del Rosario"
+          />
+        </figure>
+        <div class="ProjectCardContent">
+          <div class="ProjectInner-title">
+            Edificio nuestra señora del rosario
+          </div>
+          <p>Vitacura District in Santiago.</p>
+          <p>
+            20 apartments of 106 to 375 square meters. For more information, <a
+              href="https://ibuenaventura.cl/proyectos-buenaventura/nuestra-sra-del-rosario-vitacura/"
+              >please see the website</a
+            > or <a href="https://ibuenaventura.cl/brochure-nuestra/"
+              >view the brochure</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="Columns">
+        <figure>
+          <img
+            src="/src/assets/projects/NSdR.jpg"
+            alt="Imagen fachada edificio Nuestra Señora Del Rosario"
+          />
+        </figure>
+        <div class="ProjectCardContent">
+          <div class="ProjectInner-title">
+            Edificio nuestra señora del rosario
+          </div>
+          <p>Vitacura District in Santiago.</p>
+          <p>
+            20 apartments of 106 to 375 square meters. For more information, <a
+              href="https://ibuenaventura.cl/proyectos-buenaventura/nuestra-sra-del-rosario-vitacura/"
+              >please see the website</a
+            > or <a href="https://ibuenaventura.cl/brochure-nuestra/"
+              >view the brochure</a
+            >
+          </p>
+        </div>
+      </div>
+    </Card>
+    <Card title="Leased Apts, Offices & Showrooms">
+      <img src="src/assets/projects/Showroom.png" alt="Showroom" />
+      <img src="src/assets/projects/Home1.png" alt="Showroom" />
+      <img src="src/assets/projects/Office1.png" alt="Showroom" />
+      <img src="src/assets/projects/Office2.png" alt="Showroom" />
+      <img src="src/assets/projects/Apartment1.png" alt="Showroom" />
+    </Card>
+  </DocumentsCardsContainer>
+
+  <style lang="scss">
+    video {
+      width: 100%;
+    }
+
+    .Projects-menu {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: var(--size-2);
+      padding-block: var(--size-4);
+
+      &__item a {
+        text-decoration: none !important;
+        color: var(--item-doc-link);
+        font-weight: 700;
+        font-size: var(--size-3);
+      }
+    }
+    .Columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-6);
+
+      figure {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .ProjectInner-title {
+      color: var(--primary-color);
+    }
+    .ProjectCardContent {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: var(--size-4);
+      padding-right: var(--size-16);
+    }
+  </style>
+</BaseLayout>

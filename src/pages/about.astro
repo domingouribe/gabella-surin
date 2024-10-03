@@ -1,0 +1,28 @@
+---
+import DocumentsCard from "@/components/DocumentsCard.astro";
+import Card from "@/components/Card.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CardsContainer from "@/components/CardsContainer.astro";
+import TeamImage from "@/assets/AboutUs_AmbitionAction.png";
+import { Image } from "astro:assets";
+---
+
+<BaseLayout title="About us" description="About us">
+  <CardsContainer>
+    <Card
+      title="About Us"
+      description="Surinvest Ltda. is an investment company devoted to further development in emerging economies by generating value among investors and stakeholders, bringing to bear expertise by:"
+      subtitle={"The Power of Ideas"}
+      showSubtitle={true}
+    />
+    <a href="/team"
+      ><Image src={TeamImage} alt={"Team Image"} width={600} height={600} /></a
+    >
+    <Card
+      title="About Us"
+      description="Surinvest Ltda. is an investment company devoted to further development in emerging economies by generating value among investors and stakeholders, bringing to bear expertise by:"
+      subtitle={"The Power of Ideas"}
+      showSubtitle={true}
+    />
+  </CardsContainer>
+</BaseLayout>

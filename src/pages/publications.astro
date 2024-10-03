@@ -1,0 +1,31 @@
+---
+import DocumentsCard from "@/components/DocumentsCard.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import documentsData from "@/data/documents.json";
+import DocumentsCardsContainer from "@/components/DocumentsCardsContainer.astro";
+---
+
+<BaseLayout title="Publications" description="The description">
+	<DocumentsCardsContainer>
+		{
+			documentsData.map((data) => (
+				<DocumentsCard
+					title={data.title}
+					subtitle={data.subtitle ?? undefined}
+					showSubtitle={data.showSubtitle}
+					content={data.content}
+					items={data.items}
+				/>
+			))
+		}
+	</DocumentsCardsContainer>
+</BaseLayout>
+
+<style lang="scss">
+	.DocumentsCardsContainer {
+		padding-block: var(--size-16);
+		display: flex;
+		flex-flow: column nowrap;
+		gap: var(--size-12);
+	}
+</style>

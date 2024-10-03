@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import Logo from "@/assets/surinvest_logo.png";
+import Hero from "./Hero.astro";
+---
+
+<header class="Header">
+	<div class="Container">
+		<div class="Header-container">
+			<a href="/" class="Brand">
+				<Image src={Logo} width={159} height={55} alt={"Surinvest Logo"} />
+			</a>
+			<span class="TagName">Developing Frontiers</span>
+		</div>
+	</div>
+	<Hero />
+</header>
+
+<style lang="scss">
+	.Header-container {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--size-3);
+		justify-content: space-between;
+		padding-top: var(--size-3);
+		padding-bottom: var(--size-3);
+		align-items: flex-end;
+
+		.TagName {
+			color: var(--secondary-color);
+			font-size: var(--size-6);
+			font-style: italic;
+			padding-bottom: var(--size-1);
+
+			@media (max-width: 440px) {
+				font-size: var(--size-3);
+			}
+		}
+	}
+
+	@media (max-width: 440px) {
+		.Brand {
+			width: 100px;
+		}
+	}
+</style>

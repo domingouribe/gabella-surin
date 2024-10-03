@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+const team = await getCollection("team");
+
+import Card from "@/components/Card.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CardsContainer from "@/components/CardsContainer.astro";
+---
+
+<BaseLayout title="Team" description="Our team">
+  <CardsContainer>
+    {
+      team.map(
+        (member: {
+          data: { name: string; role: string | null | undefined };
+          body: string;
+        }) => (
+          <Card
+            title={member.data.name}
+            subtitle={member.data.role}
+            description={member.body}
+          />
+        )
+      )
+    }
+  </CardsContainer>
+</BaseLayout>

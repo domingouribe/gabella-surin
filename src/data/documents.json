@@ -1,0 +1,35 @@
+[
+	{
+		"title": "Publications",
+		"subtitle": "Insights to Open Minds",
+		"showSubtitle": true,
+		"content": "Please select a link below to view chronicles and download selected articles:",
+		"items": [
+			"Articles & Policy Papers",
+			"Co-Authored and/or Led World Bank Technical Paper Series",
+			"Hearings, Testimonials, Op Eds & Interviews",
+			"Books"
+		]
+	},
+	{
+		"title": "Reports",
+		"subtitle": null,
+		"showSubtitle": false,
+		"content": "Access our comprehensive reports on global issues:",
+		"items": [
+			"Annual Global Economic Outlook",
+			"Sustainable Development Goals Progress",
+			"Climate Change Impact Analysis",
+			"Digital Transformation in Developing Countries"
+		]
+	},
+	{
+		"title": "Articles & Policy Papers",
+		"subtitle": null,
+		"showSubtitle": false,
+		"content": "",
+		"items": [
+			"Universidad Autónoma de Madrid - Revista Encuentros Multidisciplinates (Madrid, Spain) May-Aug. 2024: “La desafiada búsqueda de la descarbonización"
+		]
+	}
+]

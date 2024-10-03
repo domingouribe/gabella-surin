@@ -1,0 +1,36 @@
+{
+	"images": [
+		{
+			"src": "src/assets/hero-images/01_img_header.png",
+			"alt": "Imagen de encabezado 1"
+		},
+		{
+			"src": "src/assets/hero-images/02_img_header.png",
+			"alt": "Imagen de encabezado 2"
+		},
+		{
+			"src": "src/assets/hero-images/03_img_header.png",
+			"alt": "Imagen de encabezado 3"
+		},
+		{
+			"src": "src/assets/hero-images/04_img_header.png",
+			"alt": "Imagen de encabezado 4"
+		},
+		{
+			"src": "src/assets/hero-images/05_img_header.png",
+			"alt": "Imagen de encabezado 5"
+		},
+		{
+			"src": "src/assets/hero-images/06_img_header.png",
+			"alt": "Imagen de encabezado 6"
+		},
+		{
+			"src": "src/assets/hero-images/07_img_header.png",
+			"alt": "Imagen de encabezado 7"
+		},
+		{
+			"src": "src/assets/hero-images/08_img_header.png",
+			"alt": "Imagen de encabezado 8"
+		}
+	]
+}

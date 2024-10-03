@@ -1,0 +1,107 @@
+---
+// DocumentsCard.astro
+interface Props {
+	title: string;
+	description: string;
+	image: string;
+	altImage: string;
+}
+
+const {
+	title,
+	description,
+	image,
+	altImage,
+} = Astro.props;
+---
+
+<article class="Article">
+	<header class="Article-header">
+		<h2 class="Article-title">{title}</h2>
+	</header>
+	<div class="Article-description">
+		<img src={image} alt={altImage} />
+		<div class="Article-description__inner">
+			<p>{description}</p>
+		</div>
+		<slot />
+	</div>
+</article>
+
+<style lang="scss">
+	.Article {
+		padding: var(--size-5);
+		border: solid 2px var(--border-strokes-color);
+		border-radius: var(--border-radius-sm);
+		display: flex;
+		flex-flow: column nowrap;
+		gap: var(--size-6);
+		position: relative;
+
+
+
+		&-title {
+			background-color: var(--primary-color);
+			color: white;
+			width: fit-description;
+			border-radius: var(--border-radius-md);
+			padding-block: var(--size-2);
+			padding-inline: var(--size-3);
+			font-size: var(--size-3);
+			text-transform: uppercase;
+			position: absolute;
+			z-index: 2;
+			box-shadow:
+				rgb(99, 99, 99) 3px 3px 6px,
+				rgb(255, 255, 255) 0px -2px 1px;
+
+			@media (max-width: 440px) {
+				font-size: var(--size-2);
+			}
+
+			&__auxiliar {
+				background-color: var(--grey-color-200);
+				position: absolute;
+				color: white;
+				top: 9px;
+				margin-left: 88px;
+				border-radius: var(--border-radius-md);
+				font-size: var(--size-3);
+				padding: var(--size-1) var(--size-4) var(--size-1) var(--size-16);
+				font-style: italic;
+				@media (max-width: 440px) {
+					font-size: var(--size-3);
+					margin-left: 60px;
+					top: 12px;
+				}
+			}
+		}
+
+		&-description {
+			overflow: hidden;
+			transition: max-height 0.3s ease-out;
+			max-height: auto;
+
+			&__inner {
+				padding-top: 50px;
+				display: flex;
+				flex-flow: column nowrap;
+				gap: var(--size-4);
+			}
+
+			&__items {
+				display: flex;
+				flex-flow: column nowrap;
+				gap: var(--size-4);
+			}
+		}
+
+		&.active {
+			.Article-description {
+				max-height: 1000px; /* Adjust this value as needed */
+			}
+		}
+	}
+</style>
+
+<!-- <script src="../scripts/accordion.js"></script> -->
