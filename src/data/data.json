@@ -5,10 +5,6 @@
 	},
 	"menuItems": [
 		{
-			"label": "Home",
-			"page": "/"
-		},
-		{
 			"label": "About",
 			"page": "/about"
 		},
@@ -38,7 +34,7 @@
 		},
 		{
 			"label": "Publications",
-			"page": "/publications-2"
+			"page": "/publications"
 		}
 	]
 }
