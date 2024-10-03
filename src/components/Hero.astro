@@ -1,23 +1,34 @@
 ---
 // Hero.astro
-import sliderData from "../data/slider.json";
+import { Image } from "astro:assets";
 
-const { images } = sliderData;
+import Diapo1 from "@/assets/hero-images/01_img_header.png";
+import Diapo2 from "@/assets/hero-images/02_img_header.png";
+import Diapo3 from "@/assets/hero-images/03_img_header.png";
+import Diapo4 from "@/assets/hero-images/04_img_header.png";
+import Diapo5 from "@/assets/hero-images/05_img_header.png";
+import Diapo6 from "@/assets/hero-images/06_img_header.png";
+import Diapo7 from "@/assets/hero-images/07_img_header.png";
+import Diapo8 from "@/assets/hero-images/08_img_header.png";
 ---
 
 <section class="Hero">
 	<div class="Container">
 		<div class="ImageContainer">
-			{
-				images.map((image, index) => (
-					<img
-						src={image.src}
-						alt={image.alt}
-						class={index === 0 ? "active" : ""}
-						data-index={index}
-					/>
-				))
-			}
+			<Image
+				class={"active"}
+				src={Diapo1}
+				alt={"Imagen"}
+				width={965}
+				height={181}
+			/>
+			<Image src={Diapo2} alt={"Imagen"} width={965} height={181} />
+			<Image src={Diapo3} alt={"Imagen"} width={965} height={181} />
+			<Image src={Diapo4} alt={"Imagen"} width={965} height={181} />
+			<Image src={Diapo5} alt={"Imagen"} width={965} height={181} />
+			<Image src={Diapo6} alt={"Imagen"} width={965} height={181} />
+			<Image src={Diapo7} alt={"Imagen"} width={965} height={181} />
+			<Image src={Diapo8} alt={"Imagen"} width={965} height={181} />
 		</div>
 	</div>
 </section>
