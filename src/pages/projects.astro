@@ -109,6 +109,7 @@ const newProjects = projects.filter(
 	<style lang="scss">
 		video {
 			width: 100%;
+			max-height: 350px;
 		}
 
 		.Projects-menu {
@@ -179,10 +180,24 @@ const newProjects = projects.filter(
 		@media (max-width: 768px) {
 			.LeasedGrid {
 				grid-template-columns: 1fr;
+				grid-template-rows: repeat(5, 1fr);
 				grid-template-areas:
-					"picture"
-					"wedo"
-					"weare";
+					"image-1"
+					"image-2"
+					"image-3"
+					"image-4"
+					"image-5";
+				gap: 1rem;
+			}
+			.image-1,
+			.image-2,
+			.image-3,
+			.image-4,
+			.image-5 {
+				// max-height: 200px;
+				object-fit: cover;
+				border-radius: 12px;
+				aspect-ratio: 3/2;
 			}
 		}
 	</style>

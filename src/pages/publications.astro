@@ -1,25 +1,26 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/Card.astro";
+import TheContent from "@/components/TheContent.astro";
+import SimpleItem from "@/components/SimpleItem.astro";
 ---
 
 <BaseLayout title="Publications" description="The description">
-	<div class="PublicationsContents">
+	<TheContent>
 		<Card
 			title="Publications"
+			isAccordion={true}
 			subtitle={"Insights to open minds"}
 			showSubtitle={true}
 			description="Please select a link below to view chronicles and download selected articles:">
 			<ul>
 				<li>
-					<a href="#articles">Articles &amp; Policy Papers</a><br />
-					<br />
+					<a href="#articles">Articles &amp; Policy Papers</a>
 				</li>
 				<li>
 					<a href="#coauthored"
 						>Co-Authored and/or Led World Bank Technical Paper Series</a
-					><br />
-					<br />
+					>
 				</li>
 				<li>
 					<a href="#hearings">Hearings, Testimonials, Op Eds &amp; Interviews</a
@@ -28,12 +29,11 @@ import Card from "@/components/Card.astro";
 			</ul>
 			<ul>
 				<li>
-					<a href="#books">Books</a><br />
-					<br />
+					<a href="#books">Books</a>
 				</li>
 			</ul>
 		</Card>
-		<Card title="Articles & POlicy Papers">
+		<Card title="Articles & POlicy Papers" isAccordion={true}>
 			<div>
 				<ul>
 					<li>
@@ -119,8 +119,7 @@ import Card from "@/components/Card.astro";
 							>Global Journal of Science Frontier Research - Environment and
 							Earth Science (USA) (USA) Mar. 2023: “The Elephant in the Room;
 							Preaching or Working on Climate Change"</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -402,8 +401,7 @@ import Card from "@/components/Card.astro";
 							>International Energy Law Review, and Journal of Business (London,
 							UK.) Jul. 2016 - "Climate Change: Moving the Paris Agreement for
 							Words to Deeds"</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -445,8 +443,7 @@ import Card from "@/components/Card.astro";
 							target="_blank"
 							>Transparency International (Madrid, Spain), Apr. 2015 -
 							"Evolución del tema de anticorrupción y gobernancia"</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -477,7 +474,7 @@ import Card from "@/components/Card.astro";
 							ambiente: ¿objetivos en conflicto?</a
 						>
 					</li>
-					<br />
+
 					<li>
 						<a
 							href='Downloads_Publications/Universidad Autonoma de Madrid, Mar 2013 "Allanando barreras entre fuentes de energia para el desarollo".pdf'
@@ -487,15 +484,14 @@ import Card from "@/components/Card.astro";
 							entre fuentes de energía para el desarrollo"</a
 						>
 					</li>
-					<br />
+
 					<li>
 						<a
 							href='Downloads_Publications/Empresas & Poder (Santiago, Chile), Apr.2013 "Panorama energético. Necesidades Emergentes".pdf'
 							target="_blank"
 							>Empresas &amp; Poder (Santiago, Chile), Apr. 2013 "Panorama
 							energético. Necesidades Emergentes"</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -507,7 +503,7 @@ import Card from "@/components/Card.astro";
 							www.energianews.com היגרנאה תושדח .22 (Israel, Aug. 2012)
 						</a>
 					</li>
-					<br />
+
 					<li>
 						<a
 							href="Downloads_Publications/Georgetown University; Universia (U.S.) Globalización, Competividad y Gobernabilidad April 2010,“Experiencias internacionales para fortalecer la gobernabilidad”.pdf"
@@ -518,16 +514,14 @@ import Card from "@/components/Card.astro";
 								>Universidad de Salamanca (Spain) &amp; Universidad Católica
 								(Chile)
 							</strong>Jun. 2009</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong>Asia-Pacific Economic Cooperation (APEC) </strong>(Tokyo,
 						Japan) Nov. 2008 “International Energy Issues (supply and demand
 						forecast, energy security, environmental and institutional
 						implications)”. “Criteria vs. Processes for Identifying, Managing
-						and Evaluating International Initiatives”<br />
-						<br />
+						and Evaluating International Initiatives”
 					</li>
 					<li>
 						<a
@@ -537,8 +531,7 @@ import Card from "@/components/Card.astro";
 								>Oil, Gas &amp; Energy Law Intelligence
 							</strong>(OGEL-U.K.), Sep. 2008 “Policy and Institutional
 							Framework to Combat Resource Curse &amp; Dutch Disease”</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -548,8 +541,7 @@ import Card from "@/components/Card.astro";
 								>Oil, Gas &amp; Energy Law Intelligence
 							</strong>(OGEL-U.K.) Feb, 2008 “Governance and Policy Framework
 							for Extractive Industries' Performance”</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -558,15 +550,15 @@ import Card from "@/components/Card.astro";
 							>Bank-Netherland Partnership Program (BNPP Publications) 2007
 							“Governance Framework for Extractive Industries for Africa
 							Mining”.</a
-						><br />
+						>
 					</li>
 					<li>
 						<a
 							href="Downloads_Publications/USAID Book Series 2007, “Corruption Assessment - Mozambique”.pdf"
 							target="_blank"
 							>USAID Book Series 2007 “Corruption Assessment: Mozambique”
-							(co-authored with B. Spector and S. Green)<br />
-						</a><br />
+							(co-authored with B. Spector and S. Green)
+						</a>
 					</li>
 					<li>
 						<a
@@ -575,8 +567,7 @@ import Card from "@/components/Card.astro";
 							>Universidad Autónoma de Madrid&nbsp;(Madrid, Spain)&nbsp; Revista
 							de Investigación Multidisciplinar, Dec. 2007 “Evidencias
 							Estadísticas y Experiencias sobre Gobernabilidad y Desarrollo”.</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -586,8 +577,7 @@ import Card from "@/components/Card.astro";
 							“Gobernabilidad, Corrupción y Desarrollo: <em
 								>Experiencias internacionales para transitar del dicho al hecho"</em
 							></a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -595,22 +585,20 @@ import Card from "@/components/Card.astro";
 							target="_blank">
 							Oil, Gas &amp; Energy Law Intelligence (OGEL-U.K.) Jan. 2007
 							“Extractive Industry Transparency”</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
 							href='Downloads_Publications/Development Gateway (Washington, DC, USA),  2005, Reprinted in Asia-Pacific Economic Cooperation (APEC) Vietnam, Feb. 2006, “Recasting Governance for the XXI Century Presentation".pdf'
 							target="_blank"
 							>Development Gateway (Washington, DC, USA), 2005, “Recasting
-							Governance for the XXI Century” (Reprinted in Shvil – <strong
+							Governance for the XXI Century” (Reprinted in Shvil - <strong
 								>Transparency International</strong
 							> - Israel, Jan. 2006, and <strong
 								>Asia-Pacific Economic Cooperation (APEC)</strong
 							>
 							Vietnam, Feb. 2006)</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<a
@@ -620,23 +608,21 @@ import Card from "@/components/Card.astro";
 								>Oil, Gas &amp; Energy Law Intelligence
 							</strong>(OGEL-U.K) Apr 2004 “Remarks on the ‘coming clean’
 							debate”</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong>Oil, Gas &amp; Energy Law Intelligence </strong>(OGEL-U.K.)
 						Jan. and Mar. 2004 “Governance Issues in Petroleum Development and
-						Downstream Operations”<br />
-						<br />
+						Downstream Operations”
 					</li>
 					<li>
 						<a
-							href="Downloads_Publications/Oil, Gas & Energy Law Intelligence (OGEL-U.K) Dec 2003. “Combating Corruption – Moving from Words to Deeds”.pdf"
+							href="Downloads_Publications/Oil, Gas & Energy Law Intelligence (OGEL-U.K) Dec 2003. “Combating Corruption - Moving from Words to Deeds”.pdf"
 							target="_blank"
 							><strong>Oil, Gas &amp; Energy Law Intelligence</strong>
-							(OGEL-U.K) Dec 2003 “Combating Corruption – Moving from Words to Deeds”<br
+							(OGEL-U.K) Dec 2003 “Combating Corruption - Moving from Words to Deeds”<br
 							/>
-						</a><br />
+						</a>
 					</li>
 					<li>
 						<a
@@ -646,22 +632,19 @@ import Card from "@/components/Card.astro";
 								>Oil, Gas &amp; Energy Law Intelligence
 							</strong>(OGEL-U.K) Dec 2003 “Petroleum Production, Trade and
 							Corruption in Sub-Saharan Africa”</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong>International Law and Practice</strong> (New York State Bar Association,
 						USA) Oct. 2002 “Governance and Transparency: The Missing Ingredients
-						for Development”.<br />
-						<br />
+						for Development”.
 					</li>
 					<li>
 						<strong>World Bank Development Institute</strong> (Washington, D.C. &amp;
 						Kinshasa, D.R.C.) Sep. 2002 “Gouvernance el la Lutte contre la Corruption”<br
 						/>
 						<a
-							href='Downloads_Publications/Transparency International (Berlin) Sep 2001 "Improving Public Sector Procurement in Latin America".pdf'
-							><br />
+							href='Downloads_Publications/Transparency International (Berlin) Sep 2001 "Improving Public Sector Procurement in Latin America".pdf'>
 						</a>
 					</li>
 					<li>
@@ -672,8 +655,7 @@ import Card from "@/components/Card.astro";
 							Foundation (New York, USA), Sep. 2002 “Improving Public Sector Procurement
 							in Latin America” (A Synthesis Report on Eight Case Studies of Three
 							Methods in Three Countries)</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong
@@ -685,29 +667,25 @@ import Card from "@/components/Card.astro";
 							href="https://scholarship.law.cornell.edu/cgi/viewcontent.cgi?article=1468&context=cilj">
 							(Cornell University, USA) Dec. 2000 “Corruption: Causes and
 							Corrective Actions”.</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong
 							>The European-Latin American Trade &amp; Investment Guide
 						</strong>(McGraw-Hill; U.K.), 2000 “Corruption in Latin America”.<br
 						/>
-						<br />
 					</li>
 					<li>
 						<strong
 							>International Council on Metals and the Environment Newsletter</strong
-						><u> </u>(U.K.), 1999 “Combating Corruption – a Condition for
-						Sustainable Development”.<br />
-						<br />
+						><u> </u>(U.K.), 1999 “Combating Corruption - a Condition for
+						Sustainable Development”.
 					</li>
 					<li>
 						<strong>New Perspectives on Combating Corruption.</strong> (World Bank
 						&amp; Transparency International; USA &amp; Germany), Aug. 1998 “Combating
 						Corruption for Development: The Role of Government, Business, and Civil
-						Society”<br />
-						<br />
+						Society”
 					</li>
 					<li>
 						<a
@@ -715,13 +693,11 @@ import Card from "@/components/Card.astro";
 							target="_blank"
 							><strong>Bank’s World</strong> (World Bank, USA), Sep. 1995 “Planning
 							and Budgeting Approaches: Why and What for?”</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong>Economic Development Institute</strong> (World Bank; USA), Jun.
-						1995 “Financial Restructuring. An Annotated Checklist”.<br />
-						<br />
+						1995 “Financial Restructuring. An Annotated Checklist”.
 					</li>
 					<li>
 						<strong>Journal of Energy in Southern Africa</strong> (Energy Research
@@ -729,16 +705,14 @@ import Card from "@/components/Card.astro";
 						Petroleum Promotion and Development: Possible Multi-country Approach
 						in Africa.” (Reproduced in <strong
 							>African Petroleum Producers Association Bulletin</strong
-						>, Sep.1994).<br />
-						<br />
+						>, Sep.1994).
 					</li>
 					<li>
 						<strong>World Resource Review International Journal </strong>(WRR,
 						USA), Jun. 1993 “Energy, The Environment and Sustainable
-						Development: Lateral Departures”.<br />
+						Development: Lateral Departures”.
 						<a
-							href='Downloads_Publications/Finance and Development (IMF and World Bank, USA) Dec. 1986 "Adjustment with growth, Colombia’s experience_English.pdf'
-							><br />
+							href='Downloads_Publications/Finance and Development (IMF and World Bank, USA) Dec. 1986 "Adjustment with growth, Colombia’s experience_English.pdf'>
 						</a>
 					</li>
 					<li>
@@ -760,8 +734,7 @@ import Card from "@/components/Card.astro";
 								><a
 									href='Downloads_Publications/Finance and Development (IMF and World Bank, USA) Dec. 1986 "Adjustment with growth, Colombia’s experience_Chinese.pdf'
 									>石油的采购和交易事关重要吗？</a
-								><br />
-								<br />
+								>
 							</li>
 						</ul>
 					</li>
@@ -770,25 +743,21 @@ import Card from "@/components/Card.astro";
 						Institute, University of Cape Town, South Africa), Feb. 1993 “Sub-Saharan
 						Energy Financing: The Need for a New Game Plan”. (Reprinted in <strong
 							>African Development Perspectives Yearbook</strong
-						> 1992/93; University of Bremen, Germany).<br />
-						<br />
+						> 1992/93; University of Bremen, Germany).
 					</li>
 					<li>
 						<strong>Industry Africa</strong> (UNIDO, Austria), Oct. 1992 “Challenges
-						for Africa’s Industrial Development in the 1990's”.<br />
-						<br />
+						for Africa’s Industrial Development in the 1990's”.
 					</li>
 					<li>
 						<strong>Single Market Communication Review</strong> (ITU, ASEAN ISDN
 						Council, ECTUA, U.K.), Winter 1992 “Issues on Telecommunications Development:
 						Policy Responses and Sectors Strategy for the Sub-Saharan Africa”.<br
 						/>
-						<br />
 					</li>
 					<li>
 						<strong>Negocios </strong>(Universidad Católica, Chile), Dec. 1991
-						“Perspectivas de la Economía Mundial”.<br />
-						<br />
+						“Perspectivas de la Economía Mundial”.
 					</li>
 					<li>
 						<strong>Razvoj Development</strong> (Institute for Developing Countries,
@@ -801,8 +770,7 @@ import Card from "@/components/Card.astro";
 							target="_blank"
 							>Bank’s World (World Bank, USA), Aug. 1988 “Adjustment and
 							Financial Sector Development in Africa”.</a
-						><br />
-						<br />
+						>
 					</li>
 					<li>
 						<strong
@@ -811,7 +779,6 @@ import Card from "@/components/Card.astro";
 						>
 						(JICA and OECF, Japan), Oct. 1988 “Structural Adjustment in Africa”.<br
 						/>
-						<br />
 					</li>
 					<li>
 						<a
@@ -820,19 +787,382 @@ import Card from "@/components/Card.astro";
 							>Finance and Development (IMF and World Bank, USA) December 1986
 							“Adjustment with Growth, the Case of Colombia”. (Reprinted in
 							Adjustment with Growth, IMF &amp; World Bank, Dec. 1987).</a
-						><br />
-						<br />
+						>
 					</li>
 				</ul>
 			</div>
 		</Card>
-	</div>
-</BaseLayout>
+		<Card
+			title="Co-authored / LED Word Bank Technical Paper Series"
+			isAccordion={true}>
+			<ul>
+				<li>
+					<a
+						href="https://www.oxfordenergy.org/wpcms/wp-content/uploads/2016/01/Fiscal-Stabilization-in-Oil-and-Gas-Contracts-SP-37.pdf"
+						target="_blank"
+						rel="noopener"
+						>Oxford Insitute for Energy Studies: Fiscal Stabilisation in Oil and
+						Gas Contracts: Evidence and Implications- January 2016</a
+					>
+				</li>
 
-<style lang="scss">
-	.PublicationsContents {
-		display: flex;
-		flex-flow: column nowrap;
-		gap: 3rem;
-	}
-</style>
+				<li>
+					<a
+						href="http://pdf.usaid.gov/pdf_docs/Pnadp270.pdf"
+						target="_blank"
+						rel="noopener"
+						>Anticorruption Assessment Handbook, Final Report - USAID, Feb 2009
+					</a>
+				</li>
+				<li>
+					<a
+						href='Downloads_Publications/Comision Nacional de Energia, Aug 2008 - "Contexto y Ensenanzas Internacionales para el Diseno de una Estrategia Energetica a Largo Plazo para Chile".pdfDownloads_Publications/Comision Nacional de Energia, Aug 2008 - "Contexto y Ensenanzas Internacionales para el Diseno de una Estrategia Energetica a Largo Plazo para Chile".pdf'
+						target="_blank"
+						rel="noopener"
+						>Comisión Nacional de Energía (Chile) Contexto y Enseñanzas
+						Internacionales para el Diseño de una Estrategia Energética a Largo
+						Plazo para Chile, Aug 2008</a
+					>
+				</li>
+
+				<li>
+					<a
+						href="https://www.opensocietyfoundations.org/sites/default/files/full_report_0.pdf"
+						target="_blank"
+						rel="noopener"
+						>Caspian Revenue Watch &amp; Open Society Institute: "Caspian Oil
+						Windfalls: Who Will Benefit?" 2003</a
+					>
+				</li>
+
+				<li>
+					<a
+						href="http://www.ascecuba.org/asce_proceedings/combating-corruption-from-words-to-deeds/"
+						target="_blank"
+						rel="noopener"
+						>Cuba in Transition (Association for the Study of the Cuban Economy
+						Book) 2002 Book - Chapter on "Corruption Trends and Underlying
+						Forces"</a
+					>
+				</li>
+
+				<li>
+					<a
+						href="https://books.google.cl/books?id=6q30fjbxHxYC&pg=PA78&lpg=PA78&dq=miguel+Schloss&source=bl&ots=sgFPAhQvYR&sig=DZJwp1ZNBiEG8LOT20q9HkOe4hs&hl=en&sa=X&redir_esc=y#v=onepage&q=miguel Schloss&f=false"
+						target="_blank"
+						rel="noopener"
+						>Strategy for African Mining; World Bank Technical Department Serie,
+						1992
+					</a>
+				</li>
+
+				<li>
+					<strong>Private Enterprise in Africa </strong>(with Moeen A. Qureshi)
+					November 1990
+				</li>
+				<li>
+					<strong
+						>Entering the Information Age: Implications for Developing Countries
+					</strong>(with James Cowie) November 1990
+				</li>
+				<li>
+					<strong
+						>Mining Development in Sub-Saharan Africa: Investment and Its
+						Relationship to the Enabling Environment
+					</strong>(with Peter M. Fozzard) November 1990
+				</li>
+				<li>
+					<strong>Upstream Petroleum Promotion and Development:</strong>
+					<strong>Possible Multi-Country Approach in Sub-Saharan Africa</strong>
+					(with Industry and Energy Division staff) December 1990
+				</li>
+				<li>
+					<strong
+						>Sub-Saharan Energy Financing: The Need for a New Game Plan
+					</strong>(with Industry and Energy Division staff) December 1990
+				</li>
+				<li>
+					<strong
+						>Issues in Telecommunications Development: Policy Responses and
+						Sector Strategy for Sub-Saharan Africa</strong
+					> (with Industry and Energy Division staff) April 1991
+				</li>
+				<li>
+					<strong
+						>Constraints and Challenges to Telecommunications Development</strong
+					>
+					<ul>
+						<li>
+							<strong>East European Telecom Development </strong>(with Timothy
+							Nulty &amp; Nicola Holcer) June 1991
+						</li>
+						<li>
+							<strong>Sub-Saharan Telecom Development </strong>(With David
+							Lomax) June 1991
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong
+						>From Stagnation to Market-Driven Growth: Strategies for a Dynamic
+						Industrial Development Decade for Africa. August 1991</strong
+					>
+				</li>
+				<li>
+					<strong
+						>Investing in Africa: The World Bank’s Program of Assistance and
+						Opportunities for the Private Sector
+					</strong>(with Ismail Serageldin) January 1992
+				</li>
+				<li>
+					<strong>Strategy for African Mining </strong>(with Industry and Energy
+					- I&amp;E - Division staff) April 1992
+				</li>
+				<li>
+					<strong>Strategic Agenda for Private Sector Development </strong>(with
+					I&amp;E Division staff) March 1992
+				</li>
+				<li>
+					<strong>Upstream Petroleum Development</strong> (with Thomas O’Connor)
+					May 1992
+				</li>
+				<li>
+					<strong
+						>Mitigating Risk of Private Investors in Energy Development</strong
+					>
+					<ul>
+						<li>
+							The Role of the World Bank (with James Bond &amp; Ted Gorton) July
+							1992
+						</li>
+						<li>
+							The Role of the International Finance Corporation (with Hugh
+							Henry-May) July 1992
+						</li>
+						<li>
+							The Role of the Multilateral Investment Guarantee Agency (with L.
+							Hollywood) July 1992
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong
+						>Summary Petroleum Industry Data Sheets Sub-Saharan Africa
+					</strong>(with Amit&nbsp; Mor) September 1992
+				</li>
+				<li>
+					<strong
+						>Conditions for Exploration and Mining Development: An Industry
+						Perspective
+					</strong>(with Douglas Ritchie) October 1992
+				</li>
+				<li>
+					<strong
+						>Mineral Sector Technologies: Policy Implications for Developing
+						Countries</strong
+					>
+					(with Craig B. Andrews) November 1992
+				</li>
+				<li>
+					<strong>Natural Gas in Sub-Saharan Africa </strong>(with A. Mor, J.
+					Bond and E. Mayorga-Alba) March 1992
+				</li>
+			</ul>
+		</Card>
+
+		<Card
+			title="Hearings, Testimonials, OP EDS & Interviews"
+			isAccordion={true}>
+			<ul>
+				<li class="list">
+					<a href="https://www.ren21.net/gsr-2020/" target="_blank"
+						>REN 21 Renewables 2017 and 2020 Global Status Report — Renewable
+						Energy Network; based at United Nations Environment Programme (UNEP,
+						Paris, France)</a
+					>
+				</li>
+				<li class="list">
+					<strong
+						><a
+							href="https://www.gpo.gov/fdsys/pkg/CHRG-106shrg68756/html/CHRG-106shrg68756.htm"
+							target="_blank"
+							>Committee on Foreign Relations, United States Senate: Public
+							Hearing on Anti-Corruption Efforts and African Economic
+							Development. M. Schloss Statement
+						</a>
+					</strong>
+				</li>
+				<li class="list">
+					<strong
+						><a
+							href='Downloads_Publications/Hearings/APEC, "Understanding International Energy Initiatives in the Apec Region", 2008.pdf'
+							target="_blank"
+							>Understanding International Energy Initiatives in the APEC Region</a
+						></strong
+					><a
+						href='Downloads_Publications/Hearings/APEC, "Understanding International Energy Initiatives in the Apec Region", 2008.pdf'>
+						(APEC 2008)</a
+					>
+				</li>
+				<li class="list">
+					<strong
+						>The Rise of the Global Reporting Initiative as a Case of
+						Institutional Entrepreneurship;
+					</strong>H Szejnwald Brow; M. de Jong; T. Lessidrenska; Harvard
+					University RCGB Papers - Apr. 2006
+				</li>
+				<li class="list">
+					<strong
+						>Report of the Task Force on Capacity for Program Delivery</strong
+					> (A Clinton Global Initiative Commitment) - Ideas to Optimize Development
+					Impact - 2006
+				</li>
+				<li class="list">
+					<a
+						href="http://www.amazon.com/Rotten-States-Corruption-Post-Communism-Neoliberalism/dp/0822337924/ref=sr_1_12/002-9771023-7504013?ie=UTF8&s=books&qid=1186877753&sr=8-12"
+						target="_blank"
+						><strong
+							>Rotten States? Corruption, Post-Communism, and Neoliberalism</strong
+						> by L. Holmes - May 2006</a
+					>
+				</li>
+				<li class="list">
+					<strong>Corruption: A Crime of Calculation, not of Passion (</strong
+					>Development Gateway Iraq Interview) - May 2005
+				</li>
+				<li class="list">
+					<strong>Informativo MECSUP </strong>(Gov. of Chile) “Entender las
+					Causas de Corrupción” - Sep. 2005<a
+						href="http://www.pacweb.org/Documents/diamonds_KP/5_KP_Monitoring-Eng_Sept2002.pdf">
+					</a>
+				</li>
+				<li class="list">
+					<strong>Diario Financiero </strong>(Santiago, Chile)<strong>
+					</strong>“Política Minera e Impacto Económico” - Aug. 2004
+				</li>
+				<li class="list">
+					<a
+						href="http://www.pacweb.org/Documents/diamonds_KP/5_KP_Monitoring-Eng_Sept2002.pdf"
+						target="_blank"
+						>The Kimberley Process (The Diamond and Human Security Project) Ian
+						Smiley - 2004
+					</a>
+				</li>
+				<li class="list">
+					<a href="http://www.economist.com/node/656113" target="_blank"
+						>The Economist, Jun. 14 2001, Corruption in America "Wanted- A
+						Crusade to Purify Public Life"</a
+					>
+				</li>
+				<li>
+					<strong
+						>U.S. Senate Committee of Foreign Relations
+					</strong>“Anti-corruption Efforts in African Economic Development <span
+						class="list">-</span
+					> Sep. 2000
+				</li>
+				<li class="list">
+					<strong
+						><a
+							href="https://www.opensocietyfoundations.org/sites/default/files/full_report_0.pdf"
+							target="_blank">Caspian Oil Windfalls: Who Will Benefit?</a
+						></strong
+					><a
+						href="https://www.opensocietyfoundations.org/sites/default/files/full_report_0.pdf">
+						(The Caspian Revenue Board) Svetlana Tsalik and Joseph Stiglitz -
+						2003</a
+					>
+				</li>
+				<li class="list">
+					<a
+						href="http://www.amazon.com/Fiscal-Formulation-Implementation-Producing-Countries/dp/1589061756/ref=sr_1_10/002-9771023-7504013?ie=UTF8&s=books&qid=1186877753&sr=8-10"
+						target="_blank"
+						><strong
+							>Fiscal Policy Formulation and Implementation in Oil Producing
+							Countries</strong
+						> by International Monetary Fund, J. Davis, R. Ossowski, and A. Fedelino
+						- Sep. 2003</a
+					>
+				</li>
+				<li class="list">
+					<a
+						href="http://www.amazon.com/Promoting-Licensing-Petroleum-Prospective-International/dp/9041117121/ref=sr_1_15/002-9771023-7504013?ie=UTF8&s=books&qid=1186877753&sr=8-15"
+						target="_blank"
+						><strong
+							>The Promoting and Licensing of Petroleum Prospective Acreage (</strong
+						>Internationa<strong>l </strong>Energy and Resources Law and Policy
+						Series, 16<strong>)</strong> by M. Bunter - Jan. 2002</a
+					>
+				</li>
+				<li class="list">
+					<strong>Corruption and International Business </strong>(Center for
+					Strategic and International Studies series) - Jul. 2001
+				</li>
+				<li class="list">
+					<strong>Report on Corruption Issues in Mining (</strong>Mining,
+					Minerals &amp; Sustainable Development&nbsp; - 2001)
+				</li>
+				<li class="list">
+					<a
+						href="http://www.amazon.com/Trade-Global-Policy-Environment-Discussion/dp/0821344587/ref=sr_1_16/002-9771023-7504013?ie=UTF8&s=books&qid=1186877753&sr=8-16"
+						target="_blank"
+						><strong>Trade, Global Policy, and the Environment </strong>(World
+						Bank Discussion Paper<strong>)</strong> - Jan 2000</a
+					>
+				</li>
+				<li class="list">
+					<strong
+						>Reforming Public Institutions and Strengthening Governance:
+					</strong>A World Bank Strategy<strong> -</strong> Nov. 2000
+				</li>
+				<li class="list">
+					<a
+						href="https://play.google.com/store/books/details?id=mtBFK_ACbv8C&rdid=book-mtBFK_ACbv8C&rdot=1&source=gbs_vpt_read&pcampaignid=books_booksearch_viewport"
+						target="_blank">
+						The World Bank: Its First Half Century by D. Kapur, J. P. Lewis, R.
+						Webb - 1997</a
+					>
+				</li>
+				<li class="list">
+					<strong>African Development Prospects Yearbook</strong> Comments on Energy
+					Financing - 1992/93
+				</li>
+				<li class="list">
+					<strong
+						>Linking Macroeconomic and Agricultural Policies for Adjustment with
+						Growth
+					</strong>(World Bank book on Colombia Experience by Vinod Thomas - The
+					John Hopkins University Press) - 1985
+				</li>
+			</ul>
+		</Card>
+
+		<Card title="Books" isAccordion>
+			<SimpleItem>
+				<p>
+					<a href="https://www.morebooks.de/shop-ui/shop/product/9786202231121"
+						>Editorial Académica Española: “Cambiando la conversación sobre
+						transición ionizaos energética”, 2022</a
+					>
+				</p>
+				<img
+					src="publications/CambiandoLaConversacion.jpeg"
+					alt="Portada libro Cambiando La Conversación Sobre Transición Ionizados Energética de 2033"
+				/>
+			</SimpleItem>
+			<SimpleItem>
+				<p>
+					<a
+						href="https://www.generis-publishing.com/book.php?title=mapping-carbon-neutrality-in-uncharted-territory-521"
+						>Generis Publications: “Mapping Carbon Neutrality in Uncharted
+						Territory”, 2022</a
+					>
+				</p>
+				<img
+					src="publications/MappingCarbon.jpg"
+					alt="Portada libro Mapping Carbon Neutrality in Uncharted Territory de 2022"
+				/>
+			</SimpleItem>
+		</Card>
+	</TheContent>
+</BaseLayout>

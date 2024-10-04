@@ -1,32 +1,36 @@
 ---
-// DocumentsCard.astro
+// Filename: DocumentsCard.astro
 interface Props {
-	title: string;
+	title?: string;
 	subtitle?: string | null;
 	showSubtitle?: boolean;
-	content: string;
-	items: string[];
+	description?: string;
+	classes?: string; // Prop para clases adicionales
 }
 
-const { title, subtitle, showSubtitle = false, content, items } = Astro.props;
+const {
+	title,
+	subtitle,
+	showSubtitle = false,
+	description,
+	classes,
+} = Astro.props;
 ---
 
-<article class="Article">
+<article class:list={["Article", classes]}>
 	<header class="Article-header">
-		<h2 class="Article-title">{title}</h2>
+		<h2 class="Article-header__title">{title}</h2>
 		{
 			showSubtitle && subtitle && (
-				<span class="Article-title__auxiliar">{subtitle}</span>
+				<span class="Article-header__auxiliar">{subtitle}</span>
 			)
 		}
 	</header>
-	<div class="Article-content">
-		<div class="Article-content__inner">
-			<p>{content}</p>
-			<div class="Article-content__items">
-				{items.map((item) => <a href="#"> Unacosa {item}</a>)}
-			</div>
+	<div class="Article-description">
+		<div class="Article-description__inner">
+			<p>{description}</p>
 		</div>
+		<slot />
 	</div>
 </article>
 

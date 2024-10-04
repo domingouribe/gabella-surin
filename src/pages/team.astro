@@ -11,6 +11,7 @@ import Silvia from "@/assets/team/Silvia_Schloss.png";
 import Jessie from "@/assets/team/Jessie_Schloss.png";
 import { Image } from "astro:assets";
 import TheContent from "@/components/TheContent.astro";
+import SimpleItem from "@/components/SimpleItem.astro";
 ---
 
 <BaseLayout title="Team" description="Our team">
@@ -22,7 +23,7 @@ import TheContent from "@/components/TheContent.astro";
 			showSubtitle={true}>
 			<Accordion>
 				<AccordionItem title="Miguel Schloss, President & CEO">
-					<article>
+					<SimpleItem>
 						<header>
 							<Image
 								src={Miguel}
@@ -81,7 +82,7 @@ import TheContent from "@/components/TheContent.astro";
 								from Catholic University in Chile
 							</p>
 						</section>
-					</article>
+					</SimpleItem>
 				</AccordionItem>
 
 				<AccordionItem title="Silvia Lay, Vice-President">
@@ -163,19 +164,19 @@ import TheContent from "@/components/TheContent.astro";
 			margin-bottom: 1rem;
 		}
 	}
-	.Accordion--themed {
-		--color-border: #3366cc;
-		--color-text: #1a1a1a;
-
-		.Accordion-trigger:hover {
-			background-color: #f0f4ff;
-		}
-	}
 	.left-img {
 		float: left;
 		margin-right: 1rem;
 		margin-bottom: 1rem;
 		border-radius: 13px;
 		display: block;
+
+		@media (max-width: 768px) {
+			float: none;
+			align-self: center;
+		}
+	}
+	section p {
+		margin-bottom: 12px;
 	}
 </style>
