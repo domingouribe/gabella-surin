@@ -1,14 +1,18 @@
 ---
+//File name: NavBar.astro
 import siteInfo from "@/data/data.json";
 
 const { menuItems } = siteInfo;
+const currentPath = Astro.url.pathname;
 ---
 
 <div class="Container">
 	<nav class="NavBar">
 		{
 			menuItems.map((item) => (
-				<a class="NavBar-item" href={item.page}>
+				<a
+					class={`NavBar-item ${currentPath === item.page ? "active" : ""}`}
+					href={item.page}>
 					{item.label}
 				</a>
 			))
@@ -23,6 +27,12 @@ const { menuItems } = siteInfo;
 		justify-content: center;
 		padding-top: var(--size-7);
 		padding-bottom: var(--size-4);
+
+		@media (max-width: 440px) {
+			flex-flow: column;
+			padding-top: var(--size-4);
+			padding-bottom: var(--size-4);
+		}
 
 		&-item {
 			text-transform: uppercase;
@@ -54,8 +64,15 @@ const { menuItems } = siteInfo;
 				); // Al hacer hover, el borde se expande desde la izquierda
 			}
 
-			&:hover {
+			&:hover,
+			&.active {
 				color: var(--primary-color); // Cambia también el color del texto
+				border-bottom-color: var(--primary-color);
+			}
+
+			@media (max-width: 440px) {
+				font-size: 0.8rem;
+				padding: 0.7rem 0.5rem;
 			}
 		}
 	}
