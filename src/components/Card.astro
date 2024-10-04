@@ -145,9 +145,10 @@ const {
 				header.addEventListener("click", () => {
 					const isActive = card.classList.toggle("active");
 					if (isActive) {
-						description.style.maxHeight = `${description.scrollHeight}px`;
+						(description as HTMLElement).style.maxHeight =
+							`${description.scrollHeight}px`;
 					} else {
-						description.style.maxHeight = "0px";
+						(description as HTMLElement).style.maxHeight = "0px";
 					}
 				});
 			}
