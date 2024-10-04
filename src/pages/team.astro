@@ -10,145 +10,147 @@ import Miguel from "@/assets/team/MSchloss_with_JStiglitz.png";
 import Silvia from "@/assets/team/Silvia_Schloss.png";
 import Jessie from "@/assets/team/Jessie_Schloss.png";
 import { Image } from "astro:assets";
+import TheContent from "@/components/TheContent.astro";
 ---
 
 <BaseLayout title="Team" description="Our team">
-	<Card
-		title="Our Team"
-		subtitle="Advisors with Deep Experience & Broad Diversity Backgrounds"
-		showSubtitle={true}>
-		<Accordion>
-			<AccordionItem title="Miguel Schloss, President & CEO">
-				<article>
-					<header>
-						<Image
-							src={Miguel}
-							alt="Miguel Schloos"
-							class="left-img"
-							width="270"
-						/>
-						<p>
-							<strong>M. Schloss</strong>
-							<br />President, Surinvest Ltda
-							<br />Chairman, VirtusAtlas SpA
-						</p>
-						<p><em>Investment and real estate development companies</em></p>
-					</header>
+	<TheContent>
+		<Card
+			title="Our Team"
+			description="Surinvest is led by a multi-disciplinary team, with broad-gauged development experience. It is supported by specialized firms that provide investment banking, engineering, design, and associated expertise for tailor-made strategic and investment decision."
+			subtitle="Advisors with Deep Experience & Broad Diversity Backgrounds"
+			showSubtitle={true}>
+			<Accordion>
+				<AccordionItem title="Miguel Schloss, President & CEO">
+					<article>
+						<header>
+							<Image
+								src={Miguel}
+								alt="Miguel Schloos"
+								class="left-img"
+								width="270"
+							/>
+							<p>
+								<strong>M. Schloss</strong>
+								<br />President, Surinvest Ltda
+								<br />Chairman, VirtusAtlas SpA
+							</p>
+							<p><em>Investment and real estate development companies</em></p>
+						</header>
 
-					<section>
-						<p>
-							With over 35 years of experience in economic development issues,
-							he held leadership positions in multilateral agencies, the private
-							sector, and non governmental organizations
-						</p>
+						<section>
+							<p>
+								With over 35 years of experience in economic development issues,
+								he held leadership positions in multilateral agencies, the
+								private sector, and non governmental organizations
+							</p>
 
-						<p>
-							M. Schloss was Director of Corporate and Budget Planning at the
-							World Bank, where he led the development of a three-year $4.5
-							billion strategic reform program redirecting the Bank's human and
-							financial resources, policies, and programs to address emerging
-							development issues. He also ran technical divisions in
-							telecommunications and mining (worldwide) and industry and energy
-							(in Africa), as well as country programs (in Latin America).
-						</p>
-						<p>
-							He was Executive Director of Transparency International during its
-							formative (1998-2002) years and pearheaded its creation, expansion
-							and positioning of governance and anti-corruption issues to over
-							40 countries worldwide. Since then, he became Managing Partner of
-							DamConsult Ltd, an investment and management consulting firm
-							providing support to private enterprises in strategic and business
-							planning; Expert Advisory Board member of Dalberg Global
-							Development Advisors, an international strategic advisory firm for
-							development; and Steering Committee Member of Caspian Sea Revenue
-							oil revenue industry monitoring initiative.
-						</p>
-						<p>
-							He is concurrently Trustee of Global Legal International Network
-							(GLIN); Executive Committee and Advisory Board member of
-							Transparency International in Spain and Chile, respectively; and
-							member of the Bretton Woods (World Bank - IMF) Committee, where he
-							is advisory council board member of the Multilateral Reform and
-							Climate Financing Working Groups.
-						</p>
-						<p>
-							He holds an EDP from Harvard University, an MBA from Columbia
-							University, and degrees in commercial engineering and economics
-							from Catholic University in Chile
-						</p>
-					</section>
-				</article>
-			</AccordionItem>
+							<p>
+								M. Schloss was Director of Corporate and Budget Planning at the
+								World Bank, where he led the development of a three-year $4.5
+								billion strategic reform program redirecting the Bank's human
+								and financial resources, policies, and programs to address
+								emerging development issues. He also ran technical divisions in
+								telecommunications and mining (worldwide) and industry and
+								energy (in Africa), as well as country programs (in Latin
+								America).
+							</p>
+							<p>
+								He was Executive Director of Transparency International during
+								its formative (1998-2002) years and pearheaded its creation,
+								expansion and positioning of governance and anti-corruption
+								issues to over 40 countries worldwide. Since then, he became
+								Managing Partner of DamConsult Ltd, an investment and management
+								consulting firm providing support to private enterprises in
+								strategic and business planning; Expert Advisory Board member of
+								Dalberg Global Development Advisors, an international strategic
+								advisory firm for development; and Steering Committee Member of
+								Caspian Sea Revenue oil revenue industry monitoring initiative.
+							</p>
+							<p>
+								He is concurrently Trustee of Global Legal International Network
+								(GLIN); Executive Committee and Advisory Board member of
+								Transparency International in Spain and Chile, respectively; and
+								member of the Bretton Woods (World Bank - IMF) Committee, where
+								he is advisory council board member of the Multilateral Reform
+								and Climate Financing Working Groups.
+							</p>
+							<p>
+								He holds an EDP from Harvard University, an MBA from Columbia
+								University, and degrees in commercial engineering and economics
+								from Catholic University in Chile
+							</p>
+						</section>
+					</article>
+				</AccordionItem>
 
-			<AccordionItem title="Silvia Lay, Vice-President">
-				<article>
-					<header>
-						<Image
-							src={Silvia}
-							alt="Silvia Schloss"
-							class="left-img"
-							width="270"
-						/>
-					</header>
-					<section>
-						<p>
-							Silvia Schloss, has had a long career in social development
-							programs.
-						</p>
-						<p>
-							A Certified Registered Nurse (University of Chile) by training,
-							has been involved in execution of Public Health programs in
-							Santiago, Valparaiso, and Iquique (Chile) as well as in the
-							Columbia Hospital for Women (Washington DC).
-						</p>
-						<p>
-							She was an Assistant to the Executive Director in Transparency
-							International (Berlin, Germany) during its formative years, and is
-							currently in charge of tracking and following up the investment
-							portfolio of Surinvest Ltda. as well as the planning and budgeting
-							of the company’s activities.
-						</p>
-					</section>
-				</article>
-			</AccordionItem>
-		</Accordion>
-
-		<!-- Con clases adicionales -->
-		<Accordion class="Accordion--themed">
-			<AccordionItem title="Jessie Schloss, Marketing/Art Director">
-				<article>
-					<header>
-						<Image
-							src={Jessie}
-							alt="Jessie Schloss"
-							class="left-img"
-							width="270"
-						/>
-					</header>
-					<section>
-						<p>
-							Jessie Schloss received her BFA and MBA from Suffolk University
-							and has had 13+ years of progressive experience across a broad
-							range of functions and diverse industries, including 8+ years in
-							the Berlin start-up scene.
-						</p>
-						<p>
-							She has had experience in designing marketing campaigns for
-							international startup companies, as well as optimizing operational
-							efficiency for startups and small businesses.
-						</p>
-						<p>
-							She has worked in an adminstrative level for Suffolk University's
-							Facilities Planning and Management department as the Assistant
-							Director for Administration, and has managed technical project
-							developments in the media and artificial intelligence sector in
-							Germany as a Coordinator of Special Projects.
-						</p>
-					</section>
-				</article>
-			</AccordionItem>
-		</Accordion>
-	</Card>
+				<AccordionItem title="Silvia Lay, Vice-President">
+					<article>
+						<header>
+							<Image
+								src={Silvia}
+								alt="Silvia Schloss"
+								class="left-img"
+								width="270"
+							/>
+						</header>
+						<section>
+							<p>
+								Silvia Schloss, has had a long career in social development
+								programs.
+							</p>
+							<p>
+								A Certified Registered Nurse (University of Chile) by training,
+								has been involved in execution of Public Health programs in
+								Santiago, Valparaiso, and Iquique (Chile) as well as in the
+								Columbia Hospital for Women (Washington DC).
+							</p>
+							<p>
+								She was an Assistant to the Executive Director in Transparency
+								International (Berlin, Germany) during its formative years, and
+								is currently in charge of tracking and following up the
+								investment portfolio of Surinvest Ltda. as well as the planning
+								and budgeting of the company’s activities.
+							</p>
+						</section>
+					</article>
+				</AccordionItem>
+				<AccordionItem title="Jessie Schloss, Marketing/Art Director">
+					<article>
+						<header>
+							<Image
+								src={Jessie}
+								alt="Jessie Schloss"
+								class="left-img"
+								width="270"
+							/>
+						</header>
+						<section>
+							<p>
+								Jessie Schloss received her BFA and MBA from Suffolk University
+								and has had 13+ years of progressive experience across a broad
+								range of functions and diverse industries, including 8+ years in
+								the Berlin start-up scene.
+							</p>
+							<p>
+								She has had experience in designing marketing campaigns for
+								international startup companies, as well as optimizing
+								operational efficiency for startups and small businesses.
+							</p>
+							<p>
+								She has worked in an adminstrative level for Suffolk
+								University's Facilities Planning and Management department as
+								the Assistant Director for Administration, and has managed
+								technical project developments in the media and artificial
+								intelligence sector in Germany as a Coordinator of Special
+								Projects.
+							</p>
+						</section>
+					</article>
+				</AccordionItem>
+			</Accordion>
+		</Card>
+	</TheContent>
 </BaseLayout>
 
 <style lang="scss">

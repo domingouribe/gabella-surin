@@ -1,3 +1,5 @@
+//File name: src/styles/global.scss
+
 @use "normalize.css";
 
 :root {
@@ -141,6 +143,10 @@ a,
   }
 }
 
+.MakePrimaryColor {
+  color: var(--primary-color)
+}
+
 body {
   font-family: var(--typography);
   color: var(--text-color);
@@ -153,5 +159,5 @@ body {
 }
 
 main {
-  padding-block: var(--size-10);
+  padding-block: var(--size-8);
 }

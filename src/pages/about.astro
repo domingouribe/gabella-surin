@@ -4,84 +4,87 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import TeamImage from "@/assets/AboutUs_AmbitionAction.png";
 import { Image } from "astro:assets";
 import Card from "@/components/Card.astro";
+import TheContent from "@/components/TheContent.astro";
 ---
 
 <BaseLayout title="About us" description="About us">
-	<div class="Content">
-		<Card
-			classes="about"
-			title="About Us"
-			subtitle="The Power of Ideas"
-			showSubtitle={true}>
-			<p>
-				Surinvest Ltda. is an investment company devoted to further development
-				in emerging economies by generating value among investors and
-				stakeholders, bringing to bear expertise by:
-			</p>
-			<ul>
-				<li class="text">
-					preparing, appraising, investing, overseeing and monetizing in "hard
-					assets", initially in urban and real estate development
-				</li>
-				<li class="text">
-					investing in strategic financial assets of major banking, energy,
-					water supply, mining, industry, retail, and transportation firms in
-					Chile; and
-				</li>
-				<li class="text">
-					mobilising and leading state-of-the-art know-how to assist
-					governments, civil society organisations, and private companies in
-					addressing policy and institutional issues needed for successful
-					investments and resource use through proper and integrated focus on
-					governance, quality assurance, and transparency arrangements for
-					maximum development impact.
-				</li>
-			</ul>
-		</Card>
-
-		<Image
-			src={TeamImage}
-			alt="Ambition to action"
-			width={435}
-			class="picture"
-		/>
-
-		<Card classes="contact" title="Contact Us">
-			<div class="ContactUs-container">
+	<TheContent>
+		<div class="ContentGrid">
+			<Card
+				classes="about"
+				title="About Us"
+				subtitle="The Power of Ideas"
+				showSubtitle={true}>
+				<p>
+					Surinvest Ltda. is an investment company devoted to further development
+					in emerging economies by generating value among investors and
+					stakeholders, bringing to bear expertise by:
+				</p>
 				<ul>
-					<li>Chile</li>
-					<li>Las Condes, Santiago</li>
-					<li>Phone: +56 2 2458 6050</li>
-					<li>
-						<a href="mailto:M.Schloss@sur-invest.com"
-							>M.Schloss@sur-invest.com</a
-						>
+					<li class="text">
+						preparing, appraising, investing, overseeing and monetizing in "hard
+						assets", initially in urban and real estate development
+					</li>
+					<li class="text">
+						investing in strategic financial assets of major banking, energy,
+						water supply, mining, industry, retail, and transportation firms in
+						Chile; and
+					</li>
+					<li class="text">
+						mobilising and leading state-of-the-art know-how to assist
+						governments, civil society organisations, and private companies in
+						addressing policy and institutional issues needed for successful
+						investments and resource use through proper and integrated focus on
+						governance, quality assurance, and transparency arrangements for
+						maximum development impact.
 					</li>
 				</ul>
-				<ul>
-					<li>USA</li>
-					<li>Washington D.C</li>
-					<li>Phone: +1 202 833 1626</li>
-					<li>
-						<a href="mailto:S.Lay@sur-invest.com">S.Lay@sur-invest.com</a>
-					</li>
-				</ul>
-				<ul>
-					<li>Germany</li>
-					<li>Berlin</li>
-					<li>
-						<a href="mailto:J.Schloss@sur-invest.com"
-							>J.Schloss@sur-invest.com</a
-						>
-					</li>
-				</ul>
-			</div>
-		</Card>
-	</div>
+			</Card>
+	
+			<Image
+				src={TeamImage}
+				alt="Ambition to action"
+				width={435}
+				class="picture"
+			/>
+	
+			<Card classes="contact" title="Contact Us">
+				<div class="ContactUs-container">
+					<ul>
+						<li>Chile</li>
+						<li>Las Condes, Santiago</li>
+						<li>Phone: +56 2 2458 6050</li>
+						<li>
+							<a href="mailto:M.Schloss@sur-invest.com"
+								>M.Schloss@sur-invest.com</a
+							>
+						</li>
+					</ul>
+					<ul>
+						<li>USA</li>
+						<li>Washington D.C</li>
+						<li>Phone: +1 202 833 1626</li>
+						<li>
+							<a href="mailto:S.Lay@sur-invest.com">S.Lay@sur-invest.com</a>
+						</li>
+					</ul>
+					<ul>
+						<li>Germany</li>
+						<li>Berlin</li>
+						<li>
+							<a href="mailto:J.Schloss@sur-invest.com"
+								>J.Schloss@sur-invest.com</a
+							>
+						</li>
+					</ul>
+				</div>
+			</Card>
+		</div>
+	</TheContent>
 </BaseLayout>
 
 <style lang="scss">
-	.Content {
+	.ContentGrid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto;

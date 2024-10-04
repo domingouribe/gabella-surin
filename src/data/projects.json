@@ -1,0 +1,30 @@
+[
+	{
+		"title": "Edificio Nuestra Sra. del Rosario",
+		"location": "Vitacura, Santiago",
+		"description": "20 apartments of 106 to 375 square meters.",
+		"link": "https://ibuenaventura.cl/proyectos-buenaventura/nuestra-sra-del-rosario-vitacura/",
+		"image": "/Images/04_Projects/NSdR.jpg"
+	},
+	{
+		"title": "Edificio Vincent",
+		"location": "Nuñoa, Santiago",
+		"description": "101-Unit Apartment Building with apartments ranging from 40-110 meters squared, within walking distance to stores, theaters, restaurants, and plazas.",
+		"link": "https://exxacon.cl/projects/edificio-vincent/",
+		"image": "/Images/04_Projects/Edificio Vincent.png"
+	},
+	{
+		"title": "Edificio Dalí",
+		"location": "Con Con, Viña del Mar",
+		"description": "45-Unit Apartment Building with high-end finishes, indoor and outdoor swimming pools, and a children's playground.",
+		"link": "http://dhelos.com/viviendas/",
+		"image": "/Images/04_Projects/Dali_2.png"
+	},
+	{
+		"title": "Edificio Orquídeas",
+		"location": "Colon, Santiago",
+		"description": "40-Unit Residential Apartments steps away from Colon Metro Station with swimming pool and patios.",
+		"link": "https://exxacon.cl/projects/edificio-orquideas/",
+		"image": "/Images/04_Projects/Edificio Orquideas.png"
+	}
+]

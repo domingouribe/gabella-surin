@@ -1,14 +1,16 @@
-import { defineCollection, z } from "astro:content";
-const teamCollection = defineCollection({
+import { defineCollection, z } from 'astro:content';
+
+const projectsCollection = defineCollection({
     schema: z.object({
-        name: z.string(),
-        role: z.string(),
+        title: z.string(),
+        location: z.string(),
+        description: z.string(),
+        link: z.string().url(),
         image: z.string(),
-        altImage: z.string(),
-        description: z.string(), // Markdown string
+        category: z.string(),
     }),
 });
 
 export const collections = {
-    team: teamCollection,
+    'projects': projectsCollection,
 };

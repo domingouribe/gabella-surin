@@ -1,81 +1,77 @@
 ---
-import CardsContainer from "@/components/CardsContainer.astro";
+//Filename: index.astro
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/Card.astro";
 import WordMap from "@/assets/World-Map_Services.png";
 import { Image } from "astro:assets";
+import TheContent from "@/components/TheContent.astro";
 ---
 
 <BaseLayout title="Surinvest - Home" description="Algo acá">
-	<div class="IndexGrid">
-		<Image
-			src={WordMap}
-			alt={"World Map"}
-			width={500}
-			height={500}
-			class={"picture"}
-		/>
-		<Card title="what we do" classes="wedo">
-			<p>Aiming high: Nothing is more real than our imagination n</p>
-			<p>
-				Our firm brings to bear seasoned and accomplished individuals and
-				top-of-the line associates to address complex development challenges. We
-				mobilize and provide professional experience for personalized guidance
-				throughout the entire range of issues, from policy, sector and project
-				investment issues. <a href="/about">Learn more about us.</a>
-			</p>
-		</Card>
-		<Card title=" who we are" classes="weare">
-			<p>
-				Surinvest Ltda. is a one-of-a-kind investment company that provides
-				both, advise and risk capital, to further development in emerging
-				economies, based on proven record. We seek tangible impact through
-				end-to-end and tailor-made solutions by means of purposeful strategic
-				and policy planning and directed thinking. <a href="/team"
-					>Learn more about our team.</a
-				>
-			</p>
-		</Card>
-	</div>
-</BaseLayout>
+	<TheContent>
+		<div class="IndexGrid">
+			<a href="/services" class="picture">
+				<Image src={WordMap} alt={"World Map"} width={423} height={423} />
+			</a>
+			<Card title="what we do" classes="wedo">
+				<p class="MakePrimaryColor">
+					Aiming high: Nothing is more real than our imagination
+				</p>
+				<p>
+					Our firm brings to bear seasoned and accomplished individuals and
+					top-of-the line associates to address complex development challenges.
+					We mobilize and provide professional experience for personalized
+					guidance throughout the entire range of issues, from policy, sector
+					and project investment issues.
+				</p><a href="/about">Learn more about us.</a>
+			</Card>
+			<Card title="who we are" classes="weare">
+				<p class="MakePrimaryColor">From best practices to good fits</p>
+				<p>
+					Surinvest Ltda. is a one-of-a-kind investment company that provides
+					both, advise and risk capital, to further development in emerging
+					economies, based on proven record. We seek tangible impact through
+					end-to-end and tailor-made solutions by means of purposeful strategic
+					and policy planning and directed thinking.
+				</p>
+				<a href="/team">Learn more about our team.</a>
+			</Card>
+		</div>
+	</TheContent>
 
-<style lang="scss">
-	.IndexGrid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
-		grid-template-areas:
-			"picture wedo"
-			"picture weare";
-		gap: 3rem;
-		align-items: flex-start;
-
-		:global(.wedo) {
-			grid-area: wedo;
-		}
-
-		:global(.weare) {
-			grid-area: weare;
-			line-height: 1;
-			font-size: inherit;
-		}
-
-		.picture {
-			grid-area: picture;
-			align-self: center;
-			justify-self: center;
-			max-width: 100%;
-			height: auto;
-		}
-	}
-
-	@media (max-width: 768px) {
+	<style lang="scss">
 		.IndexGrid {
-			grid-template-columns: 1fr;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(1, 1fr);
 			grid-template-areas:
-				"picture"
-				"wedo"
-				"weare";
+				"picture wedo"
+				"picture weare";
+			column-gap: 1rem;
+			row-gap: 1rem;
+			align-items: start;
+
+			.wedo {
+				grid-area: wedo;
+			}
+
+			.weare {
+				grid-area: weare;
+			}
+
+			.picture {
+				grid-area: picture;
+			}
 		}
-	}
-</style>
+
+		@media (max-width: 768px) {
+			.IndexGrid {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"picture"
+					"wedo"
+					"weare";
+			}
+		}
+	</style>
+</BaseLayout>

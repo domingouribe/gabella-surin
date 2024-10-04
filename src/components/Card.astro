@@ -1,5 +1,5 @@
 ---
-// Card.astro
+// Filename: Card.astro
 interface Props {
 	title?: string;
 	subtitle?: string | null;
@@ -19,10 +19,10 @@ const {
 
 <article class:list={["Article", classes]}>
 	<header class="Article-header">
-		<h2 class="Article-title">{title}</h2>
+		<h2 class="Article-header__title">{title}</h2>
 		{
 			showSubtitle && subtitle && (
-				<span class="Article-title__auxiliar">{subtitle}</span>
+				<span class="Article-header__auxiliar">{subtitle}</span>
 			)
 		}
 	</header>
@@ -43,42 +43,42 @@ const {
 		flex-flow: column nowrap;
 		gap: var(--size-6);
 		position: relative;
+		margin-top: 1rem;
 
 		&-header {
-			margin-top: -50px;
+			margin-top: -40px;
 			position: relative;
 			cursor: pointer;
-		}
+			height: 40px;
 
-		&-title {
-			background-color: var(--primary-color);
-			color: white;
-			width: fit-content;
-			border-radius: var(--border-radius-md);
-			padding-block: var(--size-2);
-			padding-inline: var(--size-3);
-			font-size: var(--size-4);
-			text-transform: uppercase;
-			position: absolute;
-			z-index: 2;
-			box-shadow:
-				rgb(99, 99, 99) 3px 3px 6px,
-				rgb(255, 255, 255) 0px -2px 1px;
-        font-weight: 700;
+			&__title {
+				background-color: var(--primary-color);
+				color: white;
+				width: fit-content;
+				border-radius: var(--border-radius-md);
+				padding-block: var(--size-2);
+				padding-inline: var(--size-10);
+				font-size: var(--size-4);
+				text-transform: uppercase;
+				position: absolute;
+				z-index: 2;
+				box-shadow:
+					rgb(99, 99, 99) 1px 0 4px;
+				font-weight: 700;
 
-			@media (max-width: 440px) {
-				font-size: var(--size-2);
+				@media (max-width: 440px) {
+					font-size: var(--size-2);
+				}
 			}
-
 			&__auxiliar {
 				background-color: var(--subtitle-background-color);
 				position: absolute;
 				color: white;
-				top: 9px;
+				bottom: 18px;
 				margin-left: 88px;
 				border-radius: var(--border-radius-md);
 				font-size: var(--size-4);
-				padding: var(--size-1) var(--size-4) var(--size-1) var(--size-16);
+				padding: 4px 1rem 3px 7rem;
 				font-style: italic;
 
 				@media (max-width: 440px) {
@@ -92,10 +92,11 @@ const {
 		&-description {
 			overflow: hidden;
 			transition: max-height 0.3s ease-out;
-			max-height: auto;
+			display: grid;
+			gap: 0.5rem;
 
 			&__inner {
-				padding-top: 50px;
+				// padding-top: 2.3rem;
 				display: flex;
 				flex-flow: column nowrap;
 				gap: var(--size-4);
