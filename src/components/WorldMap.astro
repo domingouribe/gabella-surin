@@ -1,0 +1,120 @@
+---
+import { createHash } from "crypto";
+
+interface Country {
+	name: string;
+	color: string;
+	hoverColor: string;
+}
+
+interface Props {
+	highlightedCountries?: Record<string, Country>;
+	defaultColor?: string;
+	defaultHoverColor?: string;
+}
+
+const {
+	highlightedCountries = {},
+	defaultColor = "#bababa",
+	defaultHoverColor = "#939393",
+} = Astro.props;
+
+const componentId =
+	"svg-map-" +
+	createHash("md5")
+		.update(JSON.stringify(Astro.props))
+		.digest("hex")
+		.substring(0, 8);
+---
+
+<div id={componentId}></div>
+
+<script
+	define:vars={{
+		componentId,
+		highlightedCountries,
+		defaultColor,
+		defaultHoverColor,
+	}}
+>
+	import svgMap from "svgmap";
+	import "svgmap/dist/svgMap.min.css";
+
+	document.addEventListener("astro:page-load", () => {
+		console.log("Evento astro:page-load disparado");
+		const mapData = {
+			colorMax: "#4CAF50",
+			colorMin: "#E57373",
+			colorNoData: defaultColor,
+			data: {
+				status: {
+					name: "Status",
+					format: "{0}",
+					default: "default",
+				},
+			},
+			applyData: "status",
+			values: Object.fromEntries(
+				Object.entries(highlightedCountries).map(([code, country]) => [
+					code,
+					{ status: country.name },
+				])
+			),
+		};
+
+		new svgMap({
+			targetElementID: componentId,
+			data: mapData,
+			colorMin: defaultColor,
+			colorMax: defaultColor,
+			colorNoData: defaultColor,
+			flagType: "none",
+			onGetTooltip: (tooltipDiv, countryID, mapData) => {
+				const countryName = mapData.data[countryID]?.name || countryID;
+				tooltipDiv.textContent = countryName;
+			},
+			onLoaded: (map) => {
+				Object.entries(highlightedCountries).forEach(
+					([countryCode, country]) => {
+						const countryElement = map.querySelector(`[id="${countryCode}"]`);
+						if (countryElement) {
+							countryElement.style.fill = country.color;
+							countryElement.style.transition = "fill 0.3s";
+							countryElement.addEventListener("mouseenter", () => {
+								countryElement.style.fill = country.hoverColor;
+							});
+							countryElement.addEventListener("mouseleave", () => {
+								countryElement.style.fill = country.color;
+							});
+						}
+					}
+				);
+
+				map.querySelectorAll("path").forEach((path) => {
+					if (!highlightedCountries[path.id]) {
+						path.style.fill = defaultColor;
+						path.style.transition = "fill 0.3s";
+						path.addEventListener("mouseenter", () => {
+							path.style.fill = defaultHoverColor;
+						});
+						path.addEventListener("mouseleave", () => {
+							path.style.fill = defaultColor;
+						});
+					}
+				});
+			},
+		});
+	});
+
+	import svgMap from "svgmap";
+	import "svgmap/dist/svgMap.min.css";
+</script>
+
+<style>
+	:global(.svgMap-map-wrapper) {
+		background: transparent;
+	}
+	:global(.svgMap-map-controls-wrapper) {
+		display: none;
+	}
+</style>

@@ -1,0 +1,32 @@
+---
+import SimpleItem from "@/components/SimpleItem.astro";
+import TheContent from "@/components/TheContent.astro";
+import WorldMap from "@/components/WorldMap.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const highlightedCountries = {
+	MX: { name: "México", color: "#006064", hoverColor: "#00838F" },
+	CO: { name: "Colombia", color: "#006064", hoverColor: "#00838F" },
+	AR: { name: "Argentina", color: "#006064", hoverColor: "#00838F" },
+	RU: { name: "Rusia", color: "#006064", hoverColor: "#00838F" },
+};
+---
+
+<BaseLayout title="Mapa del mundo" description="Pruebas componente Mapa">
+	<TheContent>
+		<SimpleItem>
+			<div class="TheMap">
+				<WorldMap highlightedCountries={highlightedCountries} />
+			</div>
+		</SimpleItem>
+	</TheContent>
+</BaseLayout>
+
+<style lang="scss">
+	.TheMap {
+		width: 100%;
+		min-height: 150px;
+		background-color: burlywood;
+		padding: 1rem;
+	}
+</style>
