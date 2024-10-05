@@ -7,6 +7,7 @@ interface Props {
 	description?: string;
 	classes?: string; // Prop para clases adicionales
 	isAccordion?: boolean;
+	id?: string;
 }
 
 const {
@@ -16,10 +17,13 @@ const {
 	description,
 	classes,
 	isAccordion = false,
+	id,
 } = Astro.props;
 ---
 
-<article class:list={["Article", classes, { "is-accordion": isAccordion }]}>
+<article
+	id={id}
+	class:list={["Article", classes, { "is-accordion": isAccordion }]}>
 	<header class="Article-header">
 		<h2 class="Article-header__title">{title}</h2>
 		{
@@ -60,14 +64,13 @@ const {
 				color: white;
 				width: fit-content;
 				border-radius: var(--border-radius-md);
-				padding-block: var(--size-2);
-				padding-inline: var(--size-10);
-				font-size: var(--size-4);
+				padding-block: var(--size-1);
+				padding-inline: var(--size-16);
+				font-size: 1.2rem;
+				font-weight: 400;
 				text-transform: uppercase;
 				position: absolute;
 				z-index: 2;
-				box-shadow: rgb(99, 99, 99) 1px 0 4px;
-				font-weight: 700;
 
 				@media (max-width: 768px) {
 					position: unset;
@@ -80,10 +83,10 @@ const {
 				position: absolute;
 				color: white;
 				bottom: 18px;
-				margin-left: 88px;
+				margin-left: 100px;
 				border-radius: var(--border-radius-md);
 				font-size: var(--size-4);
-				padding: 4px 1rem 3px 7rem;
+				padding: 4px 1rem 4px 9rem;
 				font-style: italic;
 
 				@media (max-width: 768px) {

@@ -24,18 +24,18 @@ const { title } = Astro.props;
 		&-item {
 			border-bottom: 1px solid var(--color-border, #ddd);
 			height: auto;
+			margin-bottom: 1px;
 		}
 
 		&-trigger {
 			width: 100%;
 			padding: 0.6rem 1rem;
-			border: none;
 			background: none;
 			text-align: left;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
-			gap: 0.5rem;
+			gap: 1rem;
 			background-color: #e7e7e7;
 			border-radius: 9px;
 			border: solid 1px #cacaca;
@@ -45,18 +45,23 @@ const { title } = Astro.props;
 		}
 
 		&-icon {
-			min-width: 10px;
-			width: 10px;
-			height: 10px;
+			// min-width: 10px;
+			width: 5px;
+			height: 5px;
 			border: solid var(--color-text, #333);
 			border-width: 0 2px 2px 0;
 			transform: rotate(-45deg);
-			transition: transform 0.5s ease;
+			transition: transform 0.2s ease;
 		}
 
 		&-title {
 			flex: 1;
 			font-weight: 700;
+			color: hsl(0, 0%, 33%);
+
+			&:hover {
+				color: hsl(0, 100%, 50%);
+			}
 		}
 
 		&-content {

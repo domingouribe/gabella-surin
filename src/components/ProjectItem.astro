@@ -5,11 +5,12 @@ interface Props {
 	description: string;
 	link: string;
 	image: string;
+	order: number;
 }
-const { title, location, description, link, image } = Astro.props;
+const { title, location, description, link, image, order } = Astro.props;
 ---
 
-<article class="ProjectCard">
+<article class="ProjectCard" data-order={order}>
 	<img class="ProjectCard-thumbnail" src={image} alt={title} width="420" />
 	<div class="ProjectCard-content">
 		<h3 class="ProjectCard-title">{title}</h3>
@@ -33,7 +34,8 @@ const { title, location, description, link, image } = Astro.props;
 		gap: 2rem;
 
 		&-thumbnail {
-			aspect-ratio: 7/4;
+			aspect-ratio: 7/5;
+			aspect-ratio: initial;
 			object-fit: cover;
 			height: 100%;
 			display: block;
@@ -44,9 +46,9 @@ const { title, location, description, link, image } = Astro.props;
 		&-content {
 			display: flex;
 			flex-flow: column nowrap;
-			gap: 0.3rem;
+			gap: 0.8rem;
 			line-height: 1.3;
-			font-size: 13px;
+			font-size: 14px;
 			flex: 1;
 		}
 

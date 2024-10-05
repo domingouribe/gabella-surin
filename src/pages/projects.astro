@@ -21,12 +21,17 @@ import TheContent from "@/components/TheContent.astro";
 
 // Variables definitions for load and filter contents
 const projects = await getCollection("projects");
-const completedProjects = projects.filter(
-	(project) => project.data.category === "completed"
-);
+
+
+const completedProjects = projects
+	.filter((project) => project.data.category === "completed")
+	.sort((a, b) => a.data.order - b.data.order);
+
 const newProjects = projects.filter(
 	(project) => project.data.category === "new"
 );
+
+
 ---
 
 <BaseLayout title="Projects" description="Projects">
@@ -36,10 +41,28 @@ const newProjects = projects.filter(
 			Your browser does not support the Video. Please update now
 		</video>
 
-		<Card title="New projects">
+		<Card title="Projects">
+			<p>Please select a link below to view the details of each project:</p>
+			<ul>
+				<li>
+					<a href="#construction">New Projects</a><br />
+				</li>
+				<li>
+					<a href="#completed">Completed Projects</a><br />
+				</li>
+				<li>
+					<a href="#leased">Leased Apartments, Offices &amp; Showrooms</a>
+				</li>
+			</ul>
+		</Card>
+
+		<Card title="New projects" id="construction">
 			{
 				newProjects.map((project) => (
 					<ProjectItem
+						order={project.data.order}
+
+						
 						title={project.data.title}
 						location={project.data.location}
 						description={project.data.description}
@@ -50,10 +73,11 @@ const newProjects = projects.filter(
 			}
 		</Card>
 
-		<Card title="Completed projects">
+		<Card title="Completed projects" id="completed">
 			{
 				completedProjects.map((project) => (
 					<ProjectItem
+						order={project.data.order}
 						title={project.data.title}
 						location={project.data.location}
 						description={project.data.description}
@@ -64,7 +88,7 @@ const newProjects = projects.filter(
 			}
 		</Card>
 
-		<Card title="Leased Apts, Offices & Showrooms">
+		<Card title="Leased Apts, Offices & Showrooms" id="leased">
 			<div class="LeasedGrid">
 				<Image
 					class="image-1"
